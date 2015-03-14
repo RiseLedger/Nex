@@ -1,1 +1,189 @@
-Nex Documentation Page
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nex - Api Documentation</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/syntax.min.css">
+    <link rel="stylesheet" href="css/monokai.css">
+    <script src="css/syntax.js"></script>
+    <style>
+        header {background-color: #563D7C;  border-color: #463265;  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);}
+        header a, header a:hover { color:white;}
+        header a:not(.navbar-brand):hover { color:black;}
+        .bs-sidenav {
+             background-color: #F7F5FA;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-shadow: 0 1px 0 #FFFFFF;
+        }
+
+        .bs-sidenav a {color:#716B7A;}
+        .content {
+            padding:15px;
+        }
+
+        .page-header {margin:0;}
+        table.table tbody th{font-weight: normal !important;}
+        tbody th:nth-child(1) {color:green;}
+
+        .main-menu li {position:relative;}
+
+        /* sub menu level 2 */
+        .sub-menu {display:none;position:absolute;top:100%;left:0;z-index:100;list-style:none;background:#563D7C;width:auto;padding:0;}
+        .sub-menu li {float:none;width:100%;}
+        .sub-menu li a {text-decoration:none;color:#fff;display:block;white-space: nowrap;line-height:40px;height:40px;padding:0 25px 0 15px;}
+        .sub-menu li:hover > a {background:#eee;color:#000;}
+
+        /* infinite submenu */
+        ul.sub-menu ul.sub-menu {display:none;left:100%;top:0}
+        ul.sub-menu ul.sub-menu a {color:#fff;}
+        ul.sub-menu ul.sub-menu li:hover > a {background:#eee;color:#000;}
+
+        .main-menu li:hover > .sub-menu {display:block;}
+    </style>
+
+    <script>
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad();
+
+  </script>
+</head>
+<body>
+
+<a href="https://github.com/RiseLedger/Nex"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub - Rise Ledger" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+
+    <header class="nav">
+        <div class="container">
+            <div class="navbar-header">
+              <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Nex</a>
+            </div>
+
+            <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
+                  <ul class="nav navbar-nav main-menu">
+                    <li><a href="index.html">Quick Start</a></li>
+                    <li><a href="#">Examples</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Animations</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Fade</a></li>
+                                    <li><a href="#">None</a></li>
+                                    <li><a href="#">Random</a></li>
+                                    <li><a href="#">Rotate</a></li>
+                                    <li><a href="#">Skew</a></li>
+                                    <li><a href="#">Slide Bottom</a></li>
+                                    <li><a href="#">Slide Left</a></li>
+                                    <li><a href="#">Slide Right</a></li>
+                                    <li><a href="#">Slide Top</a></li>
+                                    <li><a href="#">Zoom</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Bullet Types</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Circle</a></li>
+                                    <li><a href="#">Square</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Colors</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Amethyst</a></li>
+                                    <li><a href="#">Coral</a></li>
+                                    <li><a href="#">Default</a></li>
+                                    <li><a href="#">Sun</a></li>
+                                    <li><a href="#">Turquoise</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Customizable</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Clean</a></li>
+                                    <li><a href="#">No Bar</a></li>
+                                    <li><a href="#">No Thumbnails</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Filters</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Brightness</a></li>
+                                    <li><a href="#">Contrast</a></li>
+                                    <li><a href="#">Grayscale</a></li>
+                                    <li><a href="#">Hue Rotate</a></li>
+                                    <li><a href="#">None</a></li>
+                                    <li><a href="#">Saturate</a></li>
+                                    <li><a href="#">Sepia</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Gallery Type</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Images</a></li>
+                                    <li><a href="#">Maps</a></li>
+                                    <li><a href="#">Mixed</a></li>
+                                    <li><a href="#">Single</a></li>
+                                    <li><a href="#">Video</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Patterns</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">With</a></li>
+                                    <li><a href="#">Without</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="api.html">API</a></li>
+
+                  </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div style="line-height:20px">&nbsp;</div>
+                <h1 class="page-header">1 - Add the following files before the closing &lt;head&gt; tag</h1>
+
+                <pre><code lang="html">&lt;link rel="stylesheet" href="nex.min.css" /&gt; &lt;!-- Nex main css file --&gt;
+&lt;script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt; &lt;!-- The latest jquery --&gt;
+&lt;script type="text/javascript" src="Animo.min.js"&gt;&lt;/script&gt; &lt;!-- The Animo library --&gt;
+&lt;script type="text/javascript" src="nex.min.js"&gt;&lt;/script&gt; &lt;!-- Nex library --&gt;
+&lt;!-- optional, include only if you're using google maps --&gt;
+&lt;script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"&gt;&lt;/script&gt;</code></pre>
+
+                <div class="clearfix">&nbsp;</div>
+
+                <h1 class="page-header">2 - Create &lt;script&gt; tag, containing an array of your slides</h1>
+                <pre><code lang="javascript">&lt;script type="text/javascript"&gt;
+    var slides = [
+        {
+            link        : "http://path/to/fullscreen/image/1.png",
+            thumb       : "http://path/to/thumb/image/1.png"
+        },
+
+        {
+            link        : "http://path/to/fullscreen/image/2.png",
+            thumb       : "http://path/to/thumb/image/2.png"
+        },
+
+        {
+            link        : "http://path/to/fullscreen/image/3.png",
+            thumb       : "http://path/to/thumb/image/3.png"
+        }
+    ];
+&lt;/script&gt;</code></pre>
+
+            <div class="clearfix">&nbsp;</div>
+
+            <h1 class="page-header">3 - Run Nex Slider</h1>
+            <pre><code lang="javascript">&lt;script type="text/javascript"&gt;
+    new Nex({data: slides});
+&lt;/script&gt;</code></pre>
+    </div>
+</body>
+</html>
+

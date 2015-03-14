@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nex - Api Documentation</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/syntax.min.css">
+	<link rel="stylesheet" href="css/monokai.css">
+	<script src="css/syntax.js"></script>
+	<style>
+		header {background-color: #563D7C;  border-color: #463265;  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);}
+		header a, header a:hover { color:white;}
+		header a:not(.navbar-brand):hover { color:black;}
+		.bs-sidenav {
+			 background-color: #F7F5FA;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-shadow: 0 1px 0 #FFFFFF;
+		}
+
+		.bs-sidenav a {color:#716B7A;}
+		.content {
+			padding:15px;
+		}
+
+		.page-header {margin:0;}
+		table.table tbody th{font-weight: normal !important;}
+		tbody th:nth-child(1) {color:green;}
+
+		.main-menu li {position:relative;}
+
+        /* sub menu level 2 */
+        .sub-menu {display:none;position:absolute;top:100%;left:0;z-index:100;list-style:none;background:#563D7C;width:auto;padding:0;}
+        .sub-menu li {float:none;width:100%;}
+        .sub-menu li a {text-decoration:none;color:#fff;display:block;white-space: nowrap;line-height:40px;height:40px;padding:0 25px 0 15px;}
+        .sub-menu li:hover > a {background:#eee;color:#000;}
+
+        /* infinite submenu */
+        ul.sub-menu ul.sub-menu {display:none;left:100%;top:0}
+        ul.sub-menu ul.sub-menu a {color:#fff;}
+        ul.sub-menu ul.sub-menu li:hover > a {background:#eee;color:#000;}
+
+        .main-menu li:hover > .sub-menu {display:block;}
+	</style>
+
+	<script>
+	  hljs.tabReplace = '    ';
+ 	  hljs.initHighlightingOnLoad();
+
+  </script>
+</head>
+<body>
+
+<a href="https://github.com/RiseLedger/Nex"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub - Rise Ledger" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+
+	<header class="nav">
+		<div class="container">
+			<div class="navbar-header">
+		      <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Nex</a>
+		    </div>
+
+		    <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
+                  <ul class="nav navbar-nav main-menu">
+                    <li><a href="index.html">Quick Start</a></li>
+                    <li><a href="#">Examples</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Animations</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Fade</a></li>
+                                    <li><a href="#">None</a></li>
+                                    <li><a href="#">Random</a></li>
+                                    <li><a href="#">Rotate</a></li>
+                                    <li><a href="#">Skew</a></li>
+                                    <li><a href="#">Slide Bottom</a></li>
+                                    <li><a href="#">Slide Left</a></li>
+                                    <li><a href="#">Slide Right</a></li>
+                                    <li><a href="#">Slide Top</a></li>
+                                    <li><a href="#">Zoom</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Bullet Types</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Circle</a></li>
+                                    <li><a href="#">Square</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Colors</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Amethyst</a></li>
+                                    <li><a href="#">Coral</a></li>
+                                    <li><a href="#">Default</a></li>
+                                    <li><a href="#">Sun</a></li>
+                                    <li><a href="#">Turquoise</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Customizable</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Clean</a></li>
+                                    <li><a href="#">No Bar</a></li>
+                                    <li><a href="#">No Thumbnails</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Filters</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Brightness</a></li>
+                                    <li><a href="#">Contrast</a></li>
+                                    <li><a href="#">Grayscale</a></li>
+                                    <li><a href="#">Hue Rotate</a></li>
+                                    <li><a href="#">None</a></li>
+                                    <li><a href="#">Saturate</a></li>
+                                    <li><a href="#">Sepia</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Gallery Type</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Images</a></li>
+                                    <li><a href="#">Maps</a></li>
+                                    <li><a href="#">Mixed</a></li>
+                                    <li><a href="#">Single</a></li>
+                                    <li><a href="#">Video</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Patterns</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">With</a></li>
+                                    <li><a href="#">Without</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="api.html">API</a></li>
+
+                  </ul>
+            </nav>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="page-header"><h1>How to use</h1></div>
+		To begin using nex, create a new file (let's assume index.html) <br />
+		Then add the following libraries into your file :
+		<pre><code lang="html">&lt;link rel="stylesheet" href="nex.min.css" /&gt;
+&lt;script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="Animo.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="nex.min.js"&gt;&lt;/script&gt;
+&lt;!-- optional, include only if you're using google maps --&gt;
+&lt;script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"&gt;&lt;/script&gt;</code></pre>
+
+		<div class="page-header"><h1>Parameters</h1></div>
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th>Property</th>
+					<th>Default</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+				<tbody>
+					<tr>
+						<th>transition</th>
+						<th>random</th>
+						<th>Allows you setup a transition. <br />Can be set to: <div class="label label-default">none</div>
+				<div class="label label-default">fade</div>
+				<div class="label label-default">slideLeft</div>
+				<div class="label label-default">slideRight</div>
+				<div class="label label-default">slideTop</div>
+				<div class="label label-default">slideBottom</div>
+				<div class="label label-default">zoom</div>
+				<div class="label label-default">rotate</div>
+				<div class="label label-default">skew</div>
+				<div class="label label-default">random</div></th>
+					</tr>
+
+					<tr>
+						<th>transition_speed</th>
+						<th>600</th>
+						<th>Change this to modify the transition speed in miliseconds</th>
+					</tr>
+
+					<tr>
+						<th>delay</th>
+						<th>7000</th>
+						<th>The pause in between switching images in miliseconds.</th>
+					</tr>
+
+					<tr>
+						<th>autoplay</th>
+						<th>true</th>
+						<th>To autoplay the gallery or not. Can be set to true or false.</th>
+					</tr>
+
+					<tr>
+						<th>thumbnails</th>
+						<th>true</th>
+						<th>If you want to show or hide the thumbnails change this. Can be set to true or false</th>
+					</tr>
+
+					<tr>
+						<th>bullets</th>
+						<th>true</th>
+						<th>Show or hide the small bullets under the sliders. Can be set to true or false.</th>
+					</tr>
+
+					<tr>
+						<th>bar</th>
+						<th>true</th>
+						<th>Show or hide the thumbnails bar. Can be set to true or false.</th>
+					</tr>
+
+					<tr>
+						<th>load_bar</th>
+						<th>true</th>
+						<th>Show or hide the loading bar. Can be set to true or false.</th>
+					</tr>
+					<tr>
+						<th>style</th>
+						<th>object</th>
+						<th>This option accepts an object with the following available parameters:
+							<br> <br> <table class="table table-striped">
+								<tr>
+									<th>type</th>
+									<th>circle</th>
+									<th>You can customize the thumbnails and bullets. <br>Can be set to <div class="label label-default">circle</div> or <div class="label label-default">square</div></th>
+								</tr>
+
+								<tr>
+									<th>filter</th>
+									<th>none</th>
+									<th>Select a filter for the images. Shown only in supported browsers.
+									<br />Can be set to: <div class="label label-default">none</div> <div class="label label-default">grayscale</div>
+									<div class="label label-default">sepia</div>
+									<div class="label label-default">hue-rotate</div>
+									<div class="label label-default">brightness</div>
+									<div class="label label-default">contrast</div>
+									<div class="label label-default">saturate</div>
+									</th>
+								</tr>
+
+								<tr>
+									<th>pattern</th>
+									<th>none</th>
+									<th>Enter the url to a pattern.</th>
+								</tr>
+								<tr>
+									<th>background</th>
+									<th>#ede8d2</th>
+									<th>Choose your background color</th>
+								</tr>
+								<tr>
+									<th>hover</th>
+									<th>#aac83f</th>
+									<th>Choose the hover color</th>
+								</tr>
+								<tr>
+									<th>color</th>
+									<th>#000</th>
+									<th>Choose the color of the text</th>
+								</tr>
+							</table>
+						</th>
+					</tr>
+
+					<tr>
+						<th>data</th>
+						<th>object</th>
+						<th>
+							This parameter accepts an object which holds the slider data: <br /> <br />
+
+							<table class="table table-striped">
+								<tr>
+									<th>display</th>
+									<th>image</th>
+									<th>Select the type of the slide. <br />
+									Can be set to: <div class="label label-default">image</div>
+									<div class="label label-default">map</div>
+									<div class="label label-default">video</div>
+									</th>
+
+								</tr>
+
+								<tr>
+									<th>title</th>
+									<th>none</th>
+									<th>Your slide title</th>
+								</tr>
+								<tr>
+									<th>description</th>
+									<th>none</th>
+									<th>Your slide description</th>
+								</tr>
+								<tr>
+									<th>thumb</th>
+									<th>none</th>
+									<th>Your slide thumbnail src. Ignored if thumbnail is set to false.</th>
+								</tr>
+
+								<tr>
+									<th>link</th>
+									<th>none</th>
+									<th>The source to the image. Works only when display is set to  <div class="label label-default">image</div></th>
+								</tr>
+
+								<tr>
+									<th>alt</th>
+									<th>none</th>
+									<th>Your image alt. Works only when display is set to  <div class="label label-default">image</div></th>
+								</tr>
+
+								<tr>
+									<th>url</th>
+									<th>none</th>
+									<th>Your video url. Works only when display is set to  <div class="label label-default">video</div></th>
+								</tr>
+
+								<tr>
+									<th>marker</th>
+									<th>none</th>
+									<th>Show or hide the marker on the google maps. <br />
+									Can be set to true or false. <br /> Works only when display is set to  <div class="label label-default">map</div></th>
+								</tr>
+
+
+								<tr>
+									<th>infowindow</th>
+									<th>none</th>
+									<th>The html content to be shown on the marker upon click. <br />Works only when display is set to  <div class="label label-default">map</div></th>
+								</tr>
+
+
+								<tr>
+									<th>zoom</th>
+									<th>12</th>
+									<th>Enter the zoom level. <br />
+									Works only when display is set to  <div class="label label-default">map</div></th>
+								</tr>
+
+
+								<tr>
+									<th>type</th>
+									<th>ROADMAP</th>
+									<th>Select maps type. <br />
+									Can be set to
+									<div class="label label-default">HYBRID</div>
+									<div class="label label-default">ROADMAP</div>
+									<div class="label label-default">SATELLITE</div>
+									<div class="label label-default">TERRAIN</div>
+									 <br /><br /> Works only when display is set to  <div class="label label-default">map</div></th>
+								</tr>
+
+								<tr>
+									<th>lat</th>
+									<th>none</th>
+									<th>Enter your google maps latitude position <br />
+									Works only when display is set to  <div class="label label-default">map</div></th>
+								</tr>
+
+								<tr>
+									<th>lng</th>
+									<th>none</th>
+									<th>Enter your google maps longituted position<br />
+									Works only when display is set to  <div class="label label-default">map</div></th>
+								</tr>
+							</table>
+
+						</th>
+					</tr>
+
+				</tbody>
+
+		</table>
+
+
+
+
+
+
+<h2 class="page-header">Example with all values: </h2>
+
+<pre>
+<code class="javascript">
+
+	new Nex({
+		transition       : "fade", // none || fade || slideLeft || slideRight || slideTop || slideBottom || zoom || rotate || skew || random
+		transition_speed : 600, // how long the transition between two images will durate
+		delay            : 7000, // between images transition
+		autoplay         : false , // true || false
+		thumbnails       : true, // true || false
+		bullets          : true,  // true || false
+		bar              : true, // true || false
+		load_bar         : true, // true || false
+		style            : {
+			type       : "circle", /* circle, square */
+			filter     : "none",  // none, grayscale, sepia, hue-rotate, brightness, contrast, saturate
+			pattern    : "http://your-web-site.com/images/pattern.png", // url to pattern
+			background : "#ede8d2", // background color
+			hover      : "#aac83f", // hover color of background
+			color      : "#000" // text color
+		},
+
+		data             : [
+			{
+				display     : "image", // image, map, video
+				title       : "Image Title", // image title
+				description : "quisquam est qui dolorem ipsum quia dolor sit amet eque porro quisquam est qui", // image description
+				link        : "", // image src
+				thumb       : "", // image thumb
+				alt         : "" // image alt tag
+			},
+
+			{
+				display : "video",
+				title   : "Video Title",
+				thumb   : "", // video thumb
+				url     : "", // video link
+				description : "best of inspiration",
+				alt : ""
+			},
+
+			{
+				display     : "map", // image, map, video
+				title       : "Map Title", // image title
+				description : "some kind of description", // image description
+				thumb       : "images/thumb_5.jpg", // image thumb
+
+				marker      : true,  //  true || false (show or hide the marker of map)
+				infowindow  : "html content to display on marker open", // html content
+				zoom        : 12, // zoom level of map up to 16
+				type        : "HYBRID", // type of map to display. Ex: ROADMAP, SATELLITE, HYBRID, TERRAIN
+				lat         : 40.734771, // latitude of the map
+				lng         : -73.991654, // longitude of the map
+			}
+		]
+	});
+
+</code>
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+</body>
+</html>
+
